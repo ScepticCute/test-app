@@ -1,10 +1,10 @@
-import question from './slices/questionSlice';
+import editor from './slices/editorSlice';
 import { configureStore } from '@reduxjs/toolkit';
 // ...
 
 export const store = configureStore({
   reducer: {
-    question,
+    editor,
   },
 });
 

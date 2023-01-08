@@ -7,8 +7,15 @@ export const Header = () => {
     <header className={styles.wrapper}>
       <nav>
         <ul>
-          <Link to="/">Домашняя страница</Link>
-          <Link to="/about">О проекте</Link>
+          <li>
+            <Link to="/"> Домашняя страница</Link>
+          </li>
+          <li>
+            <Link to="/about"> О проекте</Link>
+          </li>
+          <li>
+            <Link to="/editor"> Редактор тестов </Link>
+          </li>
         </ul>
       </nav>
     </header>

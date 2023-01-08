@@ -1,0 +1,40 @@
+.wrapper {
+  max-width: var(--max-width);
+  .header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  .tests_table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-gap: 30px;
+    justify-items: center;
+
+    .test_item {
+      border-radius: 1rem;
+      max-width: 300px;
+      padding: 20px;
+
+      &_header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          font-size: 14px;
+        }
+        &_image_wrap {
+          border-radius: 1rem;
+          max-width: 100px;
+          max-width: 100px;
+        }
+
+      }
+      &_description {
+        padding: 10px;
+      }
+    }
+  }
+}

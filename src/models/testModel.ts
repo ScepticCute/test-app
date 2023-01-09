@@ -11,3 +11,9 @@ export interface ITest {
   description: string;
   questions: IQuestion[];
 }
+
+export interface ITestPostResponse {
+  title: string;
+  description: string;
+  questions: IQuestion[];
+}

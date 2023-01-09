@@ -1,23 +1,22 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { ITest } from '../../models/testModel';
+import { ITest, ITestPostResponse } from '../../models/testModel';
 import { addNewQuestion, changeTestData } from '../../redux/slices/editorSlice';
 import styles from './EditTest.module.scss';
 
-const postData: ITest = {
-  id: Math.random() * 100,
-  title: '123',
-  description: '1233',
-  questions: [
-    {
-      order: 0,
-      title: 'Самый популярный язык программирования?',
-      answerOptions: ['JavaScript', 'Python', 'Pascal', 'EmojiScript'],
-      correntAnswer: 'Python',
-    },
-  ],
-};
+// const postData: ITest = {
+//   title: '123',
+//   description: '1233',
+//   questions: [
+//     {
+//       order: 0,
+//       title: 'Самый популярный язык программирования?',
+//       answerOptions: ['JavaScript', 'Python', 'Pascal', 'EmojiScript'],
+//       correntAnswer: 'Python',
+//     },
+//   ],
+// };
 
 export const EditTest: React.FC = () => {
   const dispatch = useAppDispatch();
@@ -77,9 +76,12 @@ export const EditTest: React.FC = () => {
 
     let allIsGood = true;
     if (allIsGood) {
-      // dispatch(postNewTest());
-      // axios.post('https://63ba5e9f4482143a3f265124.mockapi.io/api/tests');
-      ('если не настроишь фанки адекватно, сделай пост на мокапи через хендлер. хуй бы с ним.');
+      console.log({ title: title, description: description, questions: questions });
+      axios.post<ITestPostResponse>('https://63ba5e9f4482143a3f265124.mockapi.io/api/tests', {
+        title: title,
+        description: description,
+        questions: questions,
+      });
     }
   };
   // INPUTS SUBMIT HANDLERS END

@@ -1,20 +1,13 @@
-import { ITest } from './../../models/testModel';
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { ITestPostResponse } from './../../models/testModel';
+import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-// import axios from 'axios';
-
-// const postNewTest = createAsyncThunk('editor/postNewTest', async (userId: number, thunkAPI) => {
-//   const { data } = await axios.post('');
-//   return data;
-// });
 
 interface IEditor {
-  test: ITest;
+  test: ITestPostResponse;
 }
 
 const initialState: IEditor = {
   test: {
-    id: Math.random() * 100,
     title: 'Название',
     description: ' Тест на тему... ',
     questions: [],
@@ -42,11 +35,6 @@ const editorSlice = createSlice({
       });
     },
   },
-  // extraReducers: (builder) => {
-  //   builder.addCase(postNewTest.fulfilled, (state, action) => {
-  //     state.test.description = 'hi';
-  //   });
-  // },
 });
 
 export const { changeTestData, addNewQuestion } = editorSlice.actions;

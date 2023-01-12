@@ -1,0 +1,25 @@
+.wrapper {
+  background-color: beige;
+  .answer {
+    padding: 20px;
+    background-color: bisque;
+
+    .answer_title {
+      text-align: center;
+    }
+
+    .incorrect_answer_description {
+      color: red;
+    }
+    .correct_answer_description {
+      color: green
+    }
+  }
+
+  .back_to_test_button {
+    background: transparent;
+    padding: 10px;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+}

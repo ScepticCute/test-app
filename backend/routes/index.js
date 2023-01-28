@@ -1,5 +1,4 @@
 const express = require("express");
-const { check } = require("express-validator");
 const TestController = require("../controllers/TestController");
 const UserController = require("../controllers/UserController");
 
@@ -7,10 +6,9 @@ const authMiddleware = require('../middleware/authMiddleware')
 const roleCheckerMiddleware = require('../middleware/roleCheckerMiddleware')
 
 const {
-  validateRegistration,
   validateRegistrationAndLogin,
   validateError,
-  validateCreateOrUpdateOrPutTests,
+  validateCreateOrUpdateOrPutTest,
 } = require('../utils/validations');
 const router = express.Router();
 

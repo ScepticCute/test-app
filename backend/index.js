@@ -23,6 +23,8 @@ const start = async () => {
       console.log("DB ERROR: ", e);
     });
 
+    console.log(process.env.MONGODB_LINK)
+
   app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
 };
 

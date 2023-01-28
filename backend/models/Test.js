@@ -24,4 +24,4 @@ const Test = new Schema({
   { timestamps: true },
 );
 
-module.exports = Test = model("test", Test);
+module.exports = model("test", Test);
